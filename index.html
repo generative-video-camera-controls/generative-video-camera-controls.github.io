@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ReCapture: Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1711">
+    <meta property="og:image:height" content="576">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="ReCapture: Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning" />
+    <meta property="og:description"
+        content="" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ReCapture: Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning" />
+    <meta name="twitter:description"
+        content="" />
+    <meta name="twitter:image" content="" />
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZERS5BVPS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8ZERS5BVPS');
+    </script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script defer src="js/fontawesome.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/synced_video_selector.js"></script>
+
+    <script type="module">
+        import { createSplatView, setSplatScene, setupCarousel } from "./js/splats.js"
+        setupCarousel(createSplatView("splat-picker"), document.querySelector("#splat-carousel"));
+    </script>
+    <style>
+        .final-element {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body style="padding: 5%; padding-top: min(15px, 5%); padding-bottom: min(5px, 5%); width: 100%">
+    <div class="container-lg text-center" style="max-width: 1500px; margin: auto;" id="main">
+        <header role="banner">
+            <!-- <div class="container" id="main"> -->
+            <div class="row">
+                <h2 class="col-md-12 text-center">
+                    <b>ReCapture:</b> Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning</br>
+                </h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3">
+                </div>
+                <div class="container-fluid text-center">
+                    <ul class="list-inline" style="white-space: nowrap; margin:0px 0px 0px 0px;" >
+                        <li><a style="font-size: calc(min(3vw, 15px))" href="">David Junhao Zhang¹²</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href="">Roni Paiss¹</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href="">Shiran Zada¹</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href="">Nikhil Karnad¹</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href="">David E. Jacobs¹</a></li><br>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href="">Yael Pritch¹</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href=""> Inbar Mosseri¹</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href=""> Mike Zheng Shou²</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))" href=""> Neal Wadhwa¹</a></li>
+                        <li><a style="font-size: calc(min(3vw, 15px))"  href="">Nataniel Ruiz¹</a></li>
+                </div>
+                <div class="col-md-12 text-center" style="font-size: calc(min(3vw, 15px))">
+            ¹Google &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;²National University of Singapore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="display: inline; font-family:verdana; font-size: calc(min(3vw, 15px))"><br>
+                </div>
+	        <div class="col-md-12 text-center" style="font-size: calc(min(3vw, 15px))">
+
+		</div>
+            </div>
+            <div class="row text-center">
+                <span class="link-block" style="padding-top: 10px; padding-bottom: 10px">
+                    <a href="" class="external-link button is-normal is-rounded is-dark"
+                        style="width: 80px; font-size: 15px">
+                        <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                    </a>
+                </span>
+            </div>
+        </header>
+
+        <main role="main">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <video id="co3d-grid" poster="img/teaser_frame.jpg" width="100%" autoplay loop muted controls playsinline>
+					  <source src="teaser.mp4" type="video/mp4"></source>
+                        
+                    </video>
+                </div>
+            </div><br><br>
+
+
+            <div class="row">
+
+            </div><br><br>
+            
+    </div>
+</body>
+
+</html>
