@@ -117,8 +117,10 @@
                 <div class="col-md-8 offset-md-2">
                     <video id="co3d-grid" poster="img/teaser_frame.jpg" width="100%" autoplay loop muted controls playsinline>
 					  <source src="teaser.mp4" type="video/mp4"></source>
-                        
                     </video>
+                    <p class="text-justify" style="text-align: left;">
+                        We present <b>ReCapture</b>, a method for generating new videos with novel camera trajectories from a single user-provided video.  Our method allows us to re-generate the source video, with all its existing scene motion, from vastly different angles and with cinematic camera motion.
+                    </p>
                 </div>
             </div><br><br>
             <div class="row">
@@ -137,11 +139,11 @@
                     <p class="text-justify" style="text-align: left;">
                         For the first stage of our method, we want to generate an incomplete anchor video conditioned on the user-provided camera trajectory and reference video. One way to do this is by using frame-by-frame depth estimation and projecting each frame into 3D space to obtain a sequence of point clouds. Then, simulating the user-specified camera movement, which can include zoom, pan, and tilt, and render the point cloud sequence according to the new camera trajectory.
                     </p>
-                    <img width="100%" src="assets/pointcloud.jpg" alt="">
+                    <img width="60%" src="assets/pointcloud.jpg" alt="">
                     <p class="text-justify" style="text-align: left;">
                         An effective way to generate the anchor video for camera trajectories that are more extreme and complex such as orbits around a point in the scene is to use image-level <a href="https://cat3d.github.io/">multiview diffusion models</a>.
                     </p>
-                    <img width="100%" src="assets/multiview.jpg" alt="">
+                    <img width="70%" src="assets/multiview.jpg" alt="">
                     <p class="text-justify" style="text-align: left;">
                         Both of these methods generate anchor videos that have poor temporal consistency, along with blurring, artifacts and black areas outside the scene. Our method is able to regenerate these approximate videos into temporally consistent and aesthetic videos using masked video fine-tuning and thanks to the strong prior of video models.</a>.
                     </p>
