@@ -125,7 +125,7 @@
                 <div class="col-md-8 offset-md-2">
                     <h3> Method </h3>
                     <p class="text-justify" style="text-align: left;">
-                        <b>ReCapture</b> consists, at setup time, of (a) Anchor video generation (b) Masked video fine-tuning using spatial and temporal LoRAs. To generate the clean output video with the new camera trajectory we simply perform inference of the video model.
+                        <b>ReCapture</b> works by <b>(a)</b> generating a noisy anchor video with a new camera trajectory using multiview diffusion models or depth-based point cloud rendering and then <b>(b)</b> regenerating the anchor video into a clean and temporally consistent reangled video using our proposed masked video fine-tuning technique, which consists in finetuning a temporal LoRA on the masked anchor video to learn the scene dyanmics and a spatial LoRA on augmented frames from the source video in order to learn the appearance of the scene. Our masked video fine-tuning technique allows us to only learn the parts of the anchor video that are informative and ignore the missing regions.
                     </p>
                     <img width="100%" src="assets/intro.jpg" alt="A diagram explaining the method..">
                 </div>
