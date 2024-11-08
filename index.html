@@ -127,7 +127,24 @@
                     <p class="text-justify" style="text-align: left;">
                         <b>ReCapture</b> works by <b>(a)</b> generating a noisy anchor video with a new camera trajectory using multiview diffusion models or depth-based point cloud rendering and then <b>(b)</b> regenerating the anchor video into a clean and temporally consistent reangled video using our proposed masked video fine-tuning technique, which consists in finetuning a temporal LoRA on the masked anchor video to learn the scene dyanmics and a spatial LoRA on augmented frames from the source video in order to learn the appearance of the scene. Our masked video fine-tuning technique allows us to only learn the parts of the anchor video that are informative and ignore the missing regions.
                     </p>
-                    <img width="100%" src="assets/intro.jpg" alt="A diagram explaining the method..">
+                    <img width="100%" src="assets/intro.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h3> Anchor Video Generation </h3>
+                    <p class="text-justify" style="text-align: left;">
+                        For the first stage of our method, we want to generate an incomplete anchor video conditioned on the user-provided camera trajectory and reference video. One way to do this is by using frame-by-frame depth estimation and projecting each frame into 3D space to obtain a sequence of point clouds. Then, simulating the user-specified camera movement, which can include zoom, pan, and tilt, and render the point cloud sequence according to the new camera trajectory.
+                    </p>
+                    <img width="100%" src="assets/pointcloud.jpg" alt="">
+                    <p class="text-justify" style="text-align: left;">
+                        An effective way to generate the anchor video for camera trajectories that are more extreme and complex such as orbits around a point in the scene is to use image-level <a href="https://cat3d.github.io/">multiview diffusion models</a>.
+                    </p>
+                    <img width="100%" src="assets/multiview.jpg" alt="">
+                    <p class="text-justify" style="text-align: left;">
+                        Both of these methods generate anchor videos that have poor temporal consistency, along with blurring, artifacts and black areas outside the scene. Our method is able to regenerate these approximate videos into temporally consistent and aesthetic videos using masked video fine-tuning and thanks to the strong prior of video models.</a>.
+                    </p>
                 </div>
             </div>
             
