@@ -116,7 +116,7 @@
         <main role="main">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <video id="co3d-grid" poster="img/teaser_frame.jpg" width="100%" autoplay loop muted controls playsinline>
+                    <video id="co3d-grid" poster="img/teaser_frame.jpg" width="91.5%" autoplay loop muted controls playsinline>
 					  <source src="teaser.mp4" type="video/mp4"></source>
                     </video>
                     <div class="text-left" style="font-size: 1.1rem; line-height: 1.6; color: #333;">
@@ -160,9 +160,14 @@
             <br>
             <br>
 
+
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <h3> Results </h3>
+                    <p class="text-justify" style="text-align: left;">
+                        The demo video displays the outcomes of the ReCapture of various videos.
+                    </p>
+            
 
             <br>
             <br>
@@ -172,7 +177,672 @@
                                   
                 </div>
             </div><br><br>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Gallery</h3>
+                    <p class="text-justify" style="text-align: left;">
+                        The outcomes of various camera trajectories following ReCapture.
+                    </p>
             
+                    <div id="single-image-compare">
+                        <div class="row m-2">
+                            <div class="col-md-10 offset-md-1">
+                                <!-- First row of navigation pills -->
+                                <ul class="nav nav-pills justify-content-center mb-2" role="navigation">
+                                    <li class="nav-item method-pill" data-value="tiltup">
+                                        <a class="nav-link active" onclick="showCarousel('tiltup')">Tilt Up<span style="font-size: 10px;"><br></span></a>
+                                    </li>
+                                    <li class="nav-item method-pill" data-value="tiltdown">
+                                        <a class="nav-link" onclick="showCarousel('tiltdown')">Tilt Down<span style="font-size: 10px;"><br></span></a>
+                                    </li>
+                                    <li class="nav-item method-pill" data-value="panleft">
+                                        <a class="nav-link" onclick="showCarousel('panleft')">Pan Left<span style="font-size: 10px;"><br></span></a>
+                                    </li>
+                                    <li class="nav-item method-pill" data-value="panright">
+                                        <a class="nav-link" onclick="showCarousel('panright')">Pan Right<span style="font-size: 10px;"><br></span></a>
+                                    </li>
+                                </ul>
+                                <!-- Second row of navigation pills -->
+                                <ul class="nav nav-pills justify-content-center" role="navigation">
+                                    <li class="nav-item method-pill" data-value="zoom_in">
+                                        <a class="nav-link" onclick="showCarousel('zoom_in')">Zoom In<span style="font-size: 10px;"><br>(with Rotation)</span></a>
+                                    </li>
+                                    <li class="nav-item method-pill" data-value="zoomout">
+                                        <a class="nav-link" onclick="showCarousel('zoomout')">Zoom Out<span style="font-size: 10px;"><br>(with Rotation)</span></a>
+                                    </li>
+                                    <li class="nav-item method-pill" data-value="orbit">
+                                        <a class="nav-link" onclick="showCarousel('orbit')">Orbit Shot<span style="font-size: 10px;"><br>(with Rotation)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                     
+
+
+                        <div id="carousel-tiltup" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltup25.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltup24.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltup26.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltup27.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-tiltup" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-tiltup" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+
+
+
+                        <div id="carousel-tiltdown" class="carousel slide d-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltdown17.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltdown16.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltdown11.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/tiltdown10.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-tiltdown" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-tiltdown" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+            
+
+                        <div id="carousel-panleft" class="carousel slide d-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panleft30.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panleft31.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panleft28.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panleft29.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-panleft" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-panleft" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+            
+
+                        <div id="carousel-panright" class="carousel slide d-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panright34.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panright35.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panright32.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/panright32.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-panright" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-panright" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+            
+
+            
+            
+                        <!-- Carousels for each camera path -->
+                        <!-- Zoom In Carousel -->
+                        <div id="carousel-zoom_in" class="carousel slide d-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomin36.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomin37.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomin38.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomin39.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-zoom_in" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-zoom_in" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+            
+                        <!-- Zoom Out Carousel (Initially hidden) -->
+                        <div id="carousel-zoomout" class="carousel slide d-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomout40.mp4" controls autoplay muted loop width="120%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomout41.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomout42.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomout43.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomout1.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/zoomout0.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-zoomout" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-zoomout" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-zoomout" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div id="carousel-orbit" class="carousel slide d-none" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First video pair -->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit14.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit15.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Second video pair -->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit22.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit23.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit18.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit19.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit8.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit9.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit4.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit5.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit6.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit7.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit20.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit21.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                          <h5 class="fancy-font" style="text-indent: 100px;">Source Video</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit12.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                           <h5 class="fancy-font" style="text-indent: 120px;">ReCapture</h5>
+                                            <div class="video-container">
+                                                <video src="assets/gallery/orbit13.mp4" controls autoplay muted loop width="100%" height="auto"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customized carousel controls -->
+                            <a class="carousel-control-prev custom-control" href="#carousel-orbit" role="button" data-slide="prev">
+                                <span class="custom-control-icon" aria-hidden="true">&#9664;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <a class="carousel-control-next custom-control" href="#carousel-orbit" role="button" data-slide="next">
+                                <span class="custom-control-icon" aria-hidden="true">&#9654;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+            
+            
+                        <!-- Add carousels for other camera paths similarly -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JavaScript to handle carousel display -->
+            <script>
+            function showCarousel(cameraPath) {
+                // Hide all carousels
+                document.querySelectorAll('.carousel').forEach(function(carousel) {
+                    carousel.classList.add('d-none');
+                });
+            
+                // Show the selected carousel
+                var selectedCarousel = document.getElementById('carousel-' + cameraPath);
+                if (selectedCarousel) {
+                    selectedCarousel.classList.remove('d-none');
+                }
+            
+                // Update active class on navigation pills
+                document.querySelectorAll('.method-pill .nav-link').forEach(function(navLink) {
+                    navLink.classList.remove('active');
+                });
+                var activeNavLink = document.querySelector('.method-pill[data-value="' + cameraPath + '"] .nav-link');
+                if (activeNavLink) {
+                    activeNavLink.classList.add('active');
+                }
+            }
+            </script>
+            
+            <!-- Custom styles for carousel controls and labels -->
+            <style>
+            .custom-control {
+                width: 60px;
+                height: 60px;
+                background-color: rgba(0,0,0,0.5);
+                border-radius: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            .custom-control-icon {
+                font-size: 30px;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            .carousel-control-prev.custom-control {
+                left: -80px;
+            }
+            
+            .carousel-control-next.custom-control {
+                right: -80px;
+            }
+            
+            /* Fancy font style */
+            .fancy-font {
+                font-family: 'Cinzel', serif;
+            }
+            
+            /* Center labels above videos */
+
+
+            .video-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 50.25%; /* Aspect ratio: 16:9 */
+            }
+
+            .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            .video-container {
+                display: inline-block;
+            }
+            
+            .video-container h5 {
+                margin-bottom: 10px;
+            }
+            
+            /* Import fancy font */
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+            </style>
+            
+            <!-- Include Bootstrap JS and dependencies -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+            
+            <br>
+            <br>
+
+            <br>
+            <br>
+
+            <div class="row justify-content-center">
+                <div class="col-md-7 center text-start">
+                    <label style="display: inline" for="bibtex">
+                        <h4 style="text-align: center">BibTeX </h4>
+                    </label>
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{zhang2024recapture,
+    title={ReCapture: Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning},
+    author={Zhang, David Junhao and Paiss, Roni and Zada, Shiran and Karnad, Nikhil and Jacobs, David E and Pritch, Yael and Mosseri, Inbar and Shou, Mike Zheng and Wadhwa, Neal and Ruiz, Nataniel},
+    journal={arXiv preprint arXiv:2411.05003},
+    year={2024}
+}
+                        </textarea>
+                </div>
+            </div>
+            
+        </main>
+        <footer>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-start">
+
+                    <p class="text-justify" style="text-align: left;">
+                        <i>
+                            The website template was borrowed from <a href="https://cat3d.github.io/">CAT3D</a>, <a href="http://mgharbi.com/">Michaël Gharbi</a>,
+                            <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>, and <a
+                                href="https://reconfusion.github.io">ReconFusion</a>.
+                        </i>
+                    </p>
+                </div>
+            </div>
+
+        </footer>
     </div>
 </body>
 
